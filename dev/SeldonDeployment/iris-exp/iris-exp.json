@@ -68,7 +68,21 @@
                 },
                 "engineResources": {},
                 "svcOrchSpec": {},
-                "traffic": 90
+                "traffic": 90,
+                "explainer": {
+                    "type": "AnchorTabular",
+                    "modelUri": "gs://tom-seldon-examples/deploy-workshop/pretrained",
+                    "containerSpec": {
+                        "name": "",
+                        "resources": {}
+                    },
+                    "config": {
+                        "batch_size": "100",
+                        "delta": "0.1",
+                        "tau": "0.15",
+                        "threshold": "0.95"
+                    }
+                }
             },
             {
                 "name": "canary",
